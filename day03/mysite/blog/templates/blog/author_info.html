@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人信息</title>
+    <link rel="stylesheet" href="/static/js/lib/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <script src="/static/js/lib/jquery2.2.4/jquery-2.2.4.min.js"></script>
+    <script src="/static/js/lib/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/static/css/index.css">
+    <link rel="stylesheet" href="/static/css/main.css">
+    <style>
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">P站</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="index.html"><i class="glyphicon glyphicon-home"></i> 首页 <span class="sr-only">(current)</span></a>
+                </li>
+                <li><a href="main.html"><i class="glyphicon glyphicon-user"></i> 个人主页</a></li>
+                <li><a href="article_publish.html"><i class="glyphicon glyphicon-text-size"></i> 发表文章</a></li>
+                <li><a href="#"><i class="glyphicon glyphicon-comment"></i> 我的消息<i class="label label-danger">10</i></a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false"><i class="glyphicon glyphicon-link"></i> 网站导航 <span
+                            class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="article_publish.html">发表文章</a></li>
+                        <li><a href="article_single.html">查看文章</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">查看喜欢的文章</a></li>
+                        <li><a href="#">查看收藏的文章</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">查看消息</a></li>
+                        <li><a href="#">最新评论</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">修改登录密码</a></li>
+                        <li><a href="#">完善个人资料</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="navbar-form navbar-left">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="请输入关键词">
+                </div>
+                <button type="submit" class="btn btn-default">搜索</button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="register.html">新用户注册</a></li>
+                <li><a href="login.html">会员登录</a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+<div class="container">
+    <div class="row">
+        <!-- 左侧部分 -->
+        <div class="col-md-10 col-sm-offset-3">
+            <div class="row author-info">
+                <div class="col-md-8">
+                    <div class="media">
+                        <div class="media-left">
+                            <a href="#">
+                                <img class="media-object img-circle" src="./images/headers/5.jpg" alt="...">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h2 class="media-heading">奈斯嗷</h2>
+                            <ul class="list-inline">
+                                <li class="text-center">
+                                    <a href="#">
+                                        <span class="text-my">66</span><br/>
+                                        <span class="text-muted">关注</span>
+                                    </a>
+                                </li>
+                                <li class="text-center">
+                                    <a href="#" class="text-muted">
+                                        <span class="text-my">666</span><br/>
+                                        <span class="text-muted">粉丝</span>
+                                    </a>
+                                </li>
+                                <li class="text-center">
+                                    <a href="#" class="text-muted">
+                                        <span class="text-my">6</span><br/>
+                                        <span class="text-muted">文章</span>
+                                    </a>
+                                </li>
+                                <li class="text-center">
+                                    <span>16666</span><br/>
+                                    <span class="text-muted">字数</span>
+                                </li>
+                                <li class="text-center">
+                                    <span>2333</span><br/>
+                                    <span class="text-muted">收获喜欢</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="row author-article">
+                <div class="col-md-12">
+                    <div>
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-book"> 文章</span></a></li>
+                            <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-pencil"> 动态</span></a></li>
+                            <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-comment"> 最新评论</span></a></li>
+                            <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-bookmark"> 热门</span></a></li>
+                        </ul>
+                        <!-- Tab panes -->
+                        <div class="tab-content ">
+                            <div role="tabpanel" class="tab-pane active" id="home">
+                                <!-- 单篇文章 -->
+                                <div class="media">
+
+                                    <div class="media-body">
+                                        <h4 class="media-heading">书评 | 3步，将书本知识转化成自身能力</h4>
+                                        <p class="text-muted">辨证唯物主义认识论认为，实践决定认识，认识对实践具有能动的反作用。</p>
+
+                                    </div>
+                                    <div class="media-right media-middle">
+                                        <a href="#">
+                                            <img class="media-object" src="./images/banel/lb1.jpg" alt="...">
+                                        </a>
+                                    </div>
+                                    <div class="media-bottom text-muted">
+                                        <span> <i class="glyphicon glyphicon-eye-open"></i> 666</span>
+                                        <span> <i class="glyphicon glyphicon-comment"></i> 66</span>
+                                        <span> <i class="glyphicon glyphicon-heart"></i> 6</span>
+                                    </div>
+
+                                </div>
+                                <!-- 单篇文章 -->
+                                <div class="media">
+
+                                    <div class="media-body">
+                                        <h4 class="media-heading">书评 | 3步，将书本知识转化成自身能力</h4>
+                                        <p class="text-muted">辨证唯物主义认识论认为，实践决定认识，认识对实践具有能动的反作用。</p>
+                                    </div>
+                                    <div class="media-right media-middle">
+                                        <a href="#">
+                                            <img class="media-object" src="./images/banel/lb2.jpg" alt="...">
+                                        </a>
+                                    </div>
+                                    <div class="media-bottom text-muted">
+                                        <span> <i class="glyphicon glyphicon-eye-open"></i> 666</span>
+                                        <span> <i class="glyphicon glyphicon-comment"></i> 66</span>
+                                        <span> <i class="glyphicon glyphicon-heart"></i> 6</span>
+                                    </div>
+                                </div>
+                                <!-- 单篇文章 -->
+                                <div class="media">
+
+                                    <div class="media-body">
+                                        <h4 class="media-heading">书评 | 3步，将书本知识转化成自身能力</h4>
+                                        <p class="text-muted">辨证唯物主义认识论认为，实践决定认识，认识对实践具有能动的反作用。</p>
+                                    </div>
+                                    <div class="media-right media-middle">
+                                        <a href="#">
+                                            <img class="media-object" src="./images/banel/lb3.jpg" alt="...">
+                                        </a>
+                                    </div>
+                                    <div class="media-bottom text-muted">
+                                        <span> <i class="glyphicon glyphicon-eye-open"></i> 666</span>
+                                        <span> <i class="glyphicon glyphicon-comment"></i> 66</span>
+                                        <span> <i class="glyphicon glyphicon-heart"></i> 6</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="profile">
+                                <!-- 评论 -->
+                                <div class="media">
+
+                                    <div class="media-body">
+                                        <h4 class="media-heading"></h4>
+                                        <p class="text-muted"></p>
+                                    </div>
+                                    <!--<div class="media-right media-middle">-->
+                                        <!--<a href="#">-->
+                                            <!--<img class="media-object" src="./images/articles/1.jpg" alt="...">-->
+                                        <!--</a>-->
+                                    <!--</div>-->
+                                    <!--<div class="media-bottom text-muted">-->
+                                        <!--<span> <i class="glyphicon glyphicon-eye-open"></i> 200</span>-->
+                                        <!--<span> <i class="glyphicon glyphicon-comment"></i> 18</span>-->
+                                        <!--<span> <i class="glyphicon glyphicon-heart"></i> 6</span>-->
+                                    <!--</div>-->
+                                </div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="messages">
+                                <!-- 消息 -->
+                                <div class="media">
+
+                                    <div class="media-body">
+                                        <h4 class="media-heading"></h4>
+                                        <p class="text-muted"></p>
+                                    </div>
+                                    <!--<div class="media-right media-middle">-->
+                                        <!--<a href="#">-->
+                                            <!--<img class="media-object" src="./images/articles/1.jpg" alt="...">-->
+                                        <!--</a>-->
+                                    <!--</div>-->
+                                    <!--<div class="media-bottom text-muted">-->
+                                        <!--<span> <i class="glyphicon glyphicon-eye-open"></i> 200</span>-->
+                                        <!--<span> <i class="glyphicon glyphicon-comment"></i> 18</span>-->
+                                        <!--<span> <i class="glyphicon glyphicon-heart"></i> 6</span>-->
+                                    <!--</div>-->
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

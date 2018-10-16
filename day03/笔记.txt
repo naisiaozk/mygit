@@ -1,0 +1,182 @@
+﻿============================================
+虚拟环境<====>真实环境
+
+真实环境：
+
+	文本文件	运行环境
+
+	CPython		最经典的、官方的， 将python代码
+	JPython		java
+	IronPython	C#
+	Pypy		
+=============================================
+难点：
+
+
+/		上下文环境  context
+路由匹配问题	
+=============================================
+回顾内容：
+昨天已经开放Django这个python web框架的学习
+优点：
+	1、有完成ORM关系映射功能
+	2、有先进MVT数据处理流程
+	3、有完善的后台管理系统
+	4、有先进模板渲染功能
+	……
+Django的历史
+	2005 劳伦斯 cms
+	使用python来完成web项目
+	2008 Django 1.0版
+
+	2018 Django 2.0版
+Django的安装
+	pip install django
+	pip install django==1.11.4
+
+创建django项目
+cmd:
+	django-admin startproject proName
+cd proName:
+	django-admin starapp modelName
+
+将创建子模块添加到配置文件
+settings.py
+	INSTALLED_APPS = ['modelName'] 注册子模块
+
+子模块下创建urls.py 路由文件，编辑该路由文件
+from django.conf.urls import url
+
+urlpatterns = [
+	……
+]
+
+根路由中包裹子路由
+from django.conf.urls import include
+
+urlpatterns = [
+	url(r"xxx", include("modelName.urls"))
+]
+
+views.py
+
+from django.http import HttpResponse
+
+def index(req):
+
+	return HttpResponse(""" 页面内容 """)
+
+
+web 流程 思路
+狼吃老天爷，没地方下爪
+
+======================================================
+今天内容
+1、回顾之前数据库知识（为今天的内容做储备）
+2、Django如何使用数据库（ORM）
+3、Django如何操作数据（CRUD）
+4、实现一个demo
+
+数据库的知识回顾
+-------------------------------------------------------
+数据库概论
+
+作业：		
+1、什么是多表关联查询，有几种多表关联的查询方式，分别是什么？
+2、mysql的引擎有哪几种，innodb Myisam 的区别？
+3、什么是数据库事务，为什么要有数据库事务，事务的特性，事务的隔离级别有哪些？
+4、什么是索引，作用？原理？MySQL的原理？
+
+========================================================
+Django项目中使用数据库
+1、安装mysql数据库，启动数据库服务，创建数据库
+2、Django底层使用sqlalchemy--> mysqldb--> pymysql
+3、在settings.py中配置
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'db_py1807a',
+        "USER": "root",
+        "PASSWORD": "root",
+        "CHARSET": "utf8",
+        "HOST": "localhost",
+        "PORT": 3306,
+    }
+}
+
+作业：
+	请简述python 经典类和新式类的区别？
+
+4、定义模型类
+	在Django中定义model类，需要继承一个类--django.db.models.Model
+
+
+create table user(
+	id int primary key,
+	age int default 18 comment '年龄'
+)
+
+5、迁移数据 
+	将我们定义的数据告诉数据库，由数据库生成对应的表
+	1）、python manage.py makemigrations	# django生成迁移文件
+	2）、Python manage.py migrate		# 将数据同步到数据库上
+
+	PS：查询迁移文件生成的SQL：python manage.py sqlmigrate blog num
+
+回顾：
+使用Django连接mysql就行数据操作
+1、告诉Django你要使用的数据库是mysql
+	settings.py
+	DATABASES = {
+	    'default': {
+		'ENGINE': 'django.db.backends.mysql',
+		'NAME': 'db_py1807a',
+		"USER": "root",
+		"PASSWORD": "root",
+		"CHARSET": "utf8",
+		"HOST": "localhost",
+		"PORT": 3306,
+	    }
+	}
+2、安装、启动mysql服务
+3、settings.py
+   import pymysql
+   pymysql.install_as_MySQLdb()
+4、定义数据模型
+models.py
+
+from django.db import models
+
+class Article(models.Model):
+	
+	id = models.Au...
+	...
+	...
+
+5、生成迁移文件，创建表
+	python manage.py makemigrations
+	python manage.py migrate
+
+
+操作数据
+	Django操作数据库有三种方式
+	1、使用类方法操作（了解）
+	2、面向对象的方式，类管理器（重要，掌握）
+	3、面向过程方式（重要，掌握）
+
+
+User.um.all() 面向对象
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
